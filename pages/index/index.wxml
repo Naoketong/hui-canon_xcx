@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="banner-section">
+    <text class="banner-title">汇典出行</text>
+    <view class="banner-beijin">
+      <image class="" src="/images/banner-01.png"></image>
+    </view>
+    <view class="banner-swiper">
+      <image class="banner-img" src="/images/banner-02.png"></image>
+        
+    </view>
+  </view>
+  <view class="cartype-section">
+    <view class="cartype-top-title">精选车型</view>
+    <view class="cartype-list">
+      <view class="cartype-item">
+        <image class="cartype-item_img" src="/images/cartype-01.jpg"></image>
+        <view class="cartype-item-text">
+          <view class="cartype-title">保时捷卡宴 turbo </view>
+          <view class="cartype-sub">已租过<text>15</text>人</view>
+          <view class="cartype-price">¥1500<text>/日</text></view>
+        </view>
+      </view>
+      <view class="cartype-item">
+        <image class="cartype-item_img" src="/images/cartype-01.jpg"></image>
+        <view class="cartype-item-text">
+          <view class="cartype-title">保时捷卡宴 turbo </view>
+          <view class="cartype-sub">已租过<text>15</text>人</view>
+          <view class="cartype-price">¥1500<text>/日</text></view>
+        </view>
+      </view>
+      <view class="cartype-item">
+        <image class="cartype-item_img" src="/images/cartype-01.jpg"></image>
+        <view class="cartype-item-text">
+          <view class="cartype-title">保时捷卡宴 turbo </view>
+          <view class="cartype-sub">已租过<text>15</text>人</view>
+          <view class="cartype-price">¥1500<text>/日</text></view>
+        </view>
+      </view>
+      <view class="cartype-item">
+        <image class="cartype-item_img" src="/images/cartype-01.jpg"></image>
+        <view class="cartype-item-text">
+          <view class="cartype-title">保时捷卡宴 turbo </view>
+          <view class="cartype-sub">已租过<text>15</text>人</view>
+          <view class="cartype-price">¥1500<text>/日</text></view>
+        </view>
+      </view>
+      
+
+    </view>
+  </view>
+</view>
