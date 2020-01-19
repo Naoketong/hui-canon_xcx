@@ -1,0 +1,43 @@
+<view class="container" hover-class="none" hover-stop-propagation="false">
+  <view class="content">
+    <view class="content-left">
+      <view class="car-choose-list">
+        <view class="car-choose-item active">经济型</view>
+        <view class="car-choose-item">商务型</view>
+        <view class="car-choose-item">豪华型</view>
+        <view class="car-choose-item">SUV</view>
+        <view class="car-choose-item">C级车</view>
+        <view class="car-choose-item">6至15座商务车</view>
+      </view>
+      
+    </view>
+    <view class="content-right">
+      <view class="cartype-list">
+        <view class="cartype-item">
+          <view class="cartype-left">
+            <image class="cartype-img" src="/images/car/丰田凯美瑞.jpg"></image>
+            <!-- <view class="cartype-zizhu">自助取还</view> -->
+          </view>
+          <view class="cartype-right">
+            <view class="cartype-title">丰田凯美瑞 <view>热</view> </view>
+            <view class="cartype-sub">2.5混动 | 三厢五座</view>
+            <view class="cartype-price">180 
+              <view class="price-yuan">元</view> 
+              <view class="price-sub">/日均</view>
+            </view>
+          </view>
+          
+
+            
+          
+        </view>
+
+
+
+        <view class="cartype-item"></view>
+        <view class="cartype-item"></view>
+        <view class="cartype-item"></view>
+      </view>
+    </view>
+  </view>
+</view>
