@@ -1,0 +1,15 @@
+<pd-tips id="pd-tips"></pd-tips>
+<view class="container">
+  <view class="login-title">
+    <!-- <view class="login-title_text">注册页面</view> -->
+    <view class="" hover-class="none" hover-stop-propagation="false">
+      
+    </view>
+  </view>
+  <view class="login-title_sub">注册页面</view>
+  <view class="login-content">
+    <input class="login-input" bindinput="loginName"  placeholder="请输入用户名" />
+    <input class="login-input" bindinput="loginPhone" placeholder="请输入用户电话"/>
+  </view>
+  <button class="login-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">注册</button>
+</view>

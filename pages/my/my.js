@@ -1,15 +1,16 @@
-//logs.js
-const util = require('../../utils/util.js')
+const app = getApp()
 
 Page({
-  data: {
-    logs: []
-  },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
-    })
-  }
+    data: {
+        userInfo: {}
+    },
+    onLoad: function() {
+        this.getData();
+    },
+    getData: function() {
+        app.getUserInfo().then(userInfo => {
+            console.log(userInfo)
+            this.setData({ userInfo })
+        })
+    }
 })
