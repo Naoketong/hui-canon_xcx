@@ -11,6 +11,7 @@ export default {
     version: VERSION,
     wxlogin: `${PREFIX}/miniprogram/wxlogin`,
     wxbind: `${PREFIX}/miniprogram/wxbind`,
+    vehicleAll: `${PREFIX}/vehicle`,
     class: (user_id) => `${PREFIX}/miniprogram/user/${user_id}/class`,
 
     classItem: (user_id, class_id) => `${PREFIX}/miniprogram/user/${user_id}/class/${class_id}`,
