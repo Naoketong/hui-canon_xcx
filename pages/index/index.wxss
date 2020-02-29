@@ -47,6 +47,7 @@ page {
     width: 690rpx;
     height: 250rpx;
     border-radius: 25rpx;
+    /* background-color: red; */
 }
 
 .cartype-section {
