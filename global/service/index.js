@@ -8,12 +8,15 @@ module.exports = {
     vehicleAll: function() {
         return wxRequest.get(API.vehicleAll);
     },
-    // classItem: function(user_id,class_id) {
-    //   return wxRequest.get(API.classItem(user_id, class_id));
-    // },
-    courseAll: function() {
-        return wxRequest.get(API.courseAll);
+    vehicleLevel: function(params) {
+        return wxRequest.post(API.vehicleLevel, params);
     },
+    classItem: function(user_id, class_id) {
+        return wxRequest.get(API.classItem(user_id, class_id));
+    },
+    // courseAll: function() {
+    //     return wxRequest.get(API.courseAll);
+    // },
     // leaveApply: function(id, params) {
     //   return wxRequest.post(API.leaveApply(id),params)
     // }

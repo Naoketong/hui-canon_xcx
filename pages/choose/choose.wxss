@@ -98,7 +98,7 @@ page {
     align-items: center; */
     width: 34rpx;
     height: 34rpx;
-    font-size: 28rpx;
+    font-size: 24rpx;
     text-align: center;
     color: #c87434;
     border: 1rpx solid #c87434;

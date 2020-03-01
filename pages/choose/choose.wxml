@@ -2,26 +2,26 @@
   <view class="content">
     <view class="content-left">
       <view class="car-choose-list">
-        <view class="car-choose-item active">经济型</view>
-        <view class="car-choose-item">商务型</view>
-        <view class="car-choose-item">豪华型</view>
-        <view class="car-choose-item">SUV</view>
-        <view class="car-choose-item">C级车</view>
-        <view class="car-choose-item">6至15座商务车</view>
+        <view class="car-choose-item {{level==0?'active':''}}" data-level="0" bindtap="changeLevel">经济型</view>
+        <view class="car-choose-item {{level==1?'active':''}}" data-level="1" bindtap="changeLevel">SUV</view>
+        <view class="car-choose-item {{level==2?'active':''}}" data-level="2" bindtap="changeLevel">中级车</view>
+        <view class="car-choose-item {{level==3?'active':''}}" data-level="3" bindtap="changeLevel">豪华型</view>
+        <view class="car-choose-item {{level==4?'active':''}}" data-level="4" bindtap="changeLevel">商务型</view>
+        <view class="car-choose-item {{level==5?'active':''}}" data-level="5" bindtap="changeLevel">6至15座商务车</view>
       </view>
-      
     </view>
     <view class="content-right">
       <view class="cartype-list">
-        <view class="cartype-item">
+
+        <view class="cartype-item" wx:for="{{vehicles}}">
           <view class="cartype-left">
-            <image class="cartype-img" src="/images/car/丰田凯美瑞.jpg"></image>
+            <image class="cartype-img" src="{{item.car_img}}"></image>
             <!-- <view class="cartype-zizhu">自助取还</view> -->
           </view>
           <view class="cartype-right">
-            <view class="cartype-title">丰田凯美瑞 <view>热</view> </view>
-            <view class="cartype-sub">2.5混动 | 三厢五座</view>
-            <view class="cartype-price">180 
+            <view class="cartype-title">{{item.car_name}} <view>热</view> </view>
+            <view class="cartype-sub">{{item.car_displacement}} | {{item.car_structure}}</view>
+            <view class="cartype-price">{{item.price}} 
               <view class="price-yuan">元</view> 
               <view class="price-sub">/日均</view>
             </view>
@@ -33,10 +33,10 @@
         </view>
 
 
-
+<!-- 
         <view class="cartype-item"></view>
         <view class="cartype-item"></view>
-        <view class="cartype-item"></view>
+        <view class="cartype-item"></view> -->
       </view>
     </view>
   </view>

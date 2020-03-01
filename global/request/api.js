@@ -12,9 +12,10 @@ export default {
     wxlogin: `${PREFIX}/miniprogram/wxlogin`,
     wxbind: `${PREFIX}/miniprogram/wxbind`,
     vehicleAll: `${PREFIX}/vehicle`,
-    class: (user_id) => `${PREFIX}/miniprogram/user/${user_id}/class`,
+    vehicleLevel: `${PREFIX}/vehicle/level`,
+    // class: (user_id) => `${PREFIX}/miniprogram/user/${user_id}/class`,
 
-    classItem: (user_id, class_id) => `${PREFIX}/miniprogram/user/${user_id}/class/${class_id}`,
-    leaveApply: (id) => `${PREFIX}/miniprogram/user-lesson/${id}/leave-apply`,
-    courseAll: `${PREFIX}/course`,
+    // classItem: (user_id, class_id) => `${PREFIX}/miniprogram/user/${user_id}/class/${class_id}`,
+    // leaveApply: (id) => `${PREFIX}/miniprogram/user-lesson/${id}/leave-apply`,
+    // courseAll: `${PREFIX}/course`,
 }
