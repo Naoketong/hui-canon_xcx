@@ -9,4 +9,6 @@
     <input class="login-input" bindinput="loginPhone" placeholder="请输入用户电话"/>
   </view>
   <button class="login-button" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+
+  <navigator url="/pages/registered/registered" class="login-registered" >没有账号？点我注册</navigator>
 </view>

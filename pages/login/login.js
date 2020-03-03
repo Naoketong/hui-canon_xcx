@@ -1,7 +1,7 @@
 import indexService from '../../global/service/index.js';
 Page({
     data: {
-        guest_name: '',
+        name: '',
         phone: '',
     },
     onReady: function() {
@@ -9,7 +9,7 @@ Page({
     },
     loginName: function(e) {
         this.setData({
-            guest_name: e.detail.value
+            name: e.detail.value
         })
     },
     loginPhone: function(e) {
@@ -24,9 +24,9 @@ Page({
         }
     },
     submitLogin: function() {
-        let guest_name = this.data.guest_name;
+        let name = this.data.name;
         let phone = this.data.phone;
-        if (!guest_name) {
+        if (!name) {
             this.tips.show('error', '请输入真实姓名', 3000);
             return
         }
@@ -39,7 +39,7 @@ Page({
                 // console.log(wxLoginRes)
                 wx.showLoading({ title: "加载中", mask: true });
                 indexService.bind({
-                    guest_name,
+                    name,
                     phone,
                     code: wxLoginRes.code
                 }).then(res => {

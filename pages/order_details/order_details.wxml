@@ -1,8 +1,8 @@
 <view class="container">
-    <!-- <view class="order-on">
+    <view class="order-on">
         <view class="order-on-text">订单号：103790874</view>
         <view class="order-on-prompt">预定成功</view>
-    </view> -->
+    </view>
     <view class="cartype-section">
         <image class="cartype-img" src="/images/car/大众帕萨特.jpg"></image>
         <view class="cartype-text">
@@ -11,30 +11,18 @@
         </view>
     </view>
     <view class="data-section">
-        <!-- <view class="data-start">
+        <view class="data-start">
             <view class="data-yue">1月15号</view>
             <view class="data-time">周三15:00</view>
-        </view> -->
-         <picker class="data-start" mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-            
-            <view class="data-yue">开始时间</view>
-            <view class="data-time">{{date}}</view>
-        </picker>
+        </view>
         <view class="data-zhi">
-            <view class="data-tian">请点击选择</view>
+            <view class="data-tian">1天</view>
             <view class="data-row"></view>
         </view>
-        <picker class="data-end" mode="date" value="{{dates}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-           <view class="data-yue">结束时间</view>
-            <view class="data-time">{{dates}}</view>
-        </picker>
-        
-        <!-- <view class="data-end">
+        <view class="data-end">
             <view class="data-yue">1月16号</view>
             <view class="data-time">周四15:40</view>
-        </view> -->
-
-
+        </view>
     </view>
 
     <view class="cost-section">
@@ -65,11 +53,11 @@
 
 
 
-    <!-- <view class="certificate-section">
+    <view class="certificate-section">
         <image class="certificate-img" src="/images/order-01.png"></image>
-    </view> -->
+    </view>
 
     <view class="foot-botton-section">
-        <view class="foot-button">确认订单</view>
+        <view class="foot-button">取车</view>
     </view>
 </view>

@@ -1,8 +1,7 @@
 Page({
     data: {
 
-        date: '2016-04-01',
-        dates: '2020-09-01',
+        date: '2016-09-01',
 
     },
 
@@ -12,4 +11,5 @@ Page({
             date: e.detail.value
         })
     },
+
 })

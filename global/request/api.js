@@ -5,7 +5,7 @@ const DEVELOPMENT_PREFIX = 'http://localhost:3000/api';
 const VERSION = 'V0.0.1';
 const PRODUCTION_APPID = 6;
 // const PREFIX =  ( MODE === 'production' ) ? PRODUCTION_PREFIX : DEVELOPMENT_PREFIX;
-const PREFIX = 'http://localhost:3000/api';
+const PREFIX = DEVELOPMENT_PREFIX;
 export default {
     MODE: MODE,
     version: VERSION,
@@ -13,6 +13,9 @@ export default {
     wxbind: `${PREFIX}/miniprogram/wxbind`,
     vehicleAll: `${PREFIX}/vehicle`,
     vehicleLevel: `${PREFIX}/vehicle/level`,
+    order: `${PREFIX}/order`,
+    orderItem: (id) => `${PREFIX}/order/${id}`,
+    costItem: (id) => `${PREFIX}/cost/${id}`,
     // class: (user_id) => `${PREFIX}/miniprogram/user/${user_id}/class`,
 
     // classItem: (user_id, class_id) => `${PREFIX}/miniprogram/user/${user_id}/class/${class_id}`,

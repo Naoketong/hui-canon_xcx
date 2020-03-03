@@ -67,14 +67,14 @@ page {
 }
 
 .data-yue {
-    font-size: 26rpx;
-    color: #d2d2d2;
+    font-size: 28rpx;
+    color: #686868;
     text-align: center;
 }
 
 .data-time {
-    font-size: 28rpx;
-    color: #686868;
+    font-size: 26rpx;
+    color: #d2d2d2;
 }
 
 .data-tian {

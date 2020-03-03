@@ -12,8 +12,7 @@
     </view>
     <view class="content-right">
       <view class="cartype-list">
-
-        <view class="cartype-item" wx:for="{{vehicles}}">
+        <navigator url="/pages/order/order?{{item.car_id}}" class="cartype-item" wx:for="{{vehicles}}">
           <view class="cartype-left">
             <image class="cartype-img" src="{{item.car_img}}"></image>
             <!-- <view class="cartype-zizhu">自助取还</view> -->
@@ -30,13 +29,7 @@
 
             
           
-        </view>
-
-
-<!-- 
-        <view class="cartype-item"></view>
-        <view class="cartype-item"></view>
-        <view class="cartype-item"></view> -->
+        </navigator>
       </view>
     </view>
   </view>
