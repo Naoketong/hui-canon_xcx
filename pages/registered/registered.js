@@ -34,16 +34,17 @@ Page({
             this.tips.show('error', '请输入手机号', 3000);
             return
         }
+        // console.log(name, phone)
         wx.login({
             success: (wxLoginRes) => {
-                // console.log(wxLoginRes)
+                console.log(wxLoginRes)
                 wx.showLoading({ title: "加载中", mask: true });
-                indexService.bind({
+                indexService.user({
                     name,
                     phone,
-                    code: wxLoginRes.code
+                    // code: wxLoginRes.code
                 }).then(res => {
-                    this.tips.show('success', "绑定成功", 3000);
+                    // this.tips.user('success', "添加成功", 3000);
                     setTimeout(() => {
                         wx.switchTab({
                             url: '/pages/index/index'

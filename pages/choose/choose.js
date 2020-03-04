@@ -9,6 +9,7 @@ Page({
     onLoad: function() {
         this.getData();
         this.getVehicleData();
+
     },
     getData: function() {
         app.getUserInfo().then(userInfo => {

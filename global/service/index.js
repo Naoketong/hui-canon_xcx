@@ -11,19 +11,31 @@ module.exports = {
     vehicleLevel: function(params) {
         return wxRequest.post(API.vehicleLevel, params);
     },
+    vehicleItem: function(id) {
+        return wxRequest.get(API.vehicleItem(id));
+    },
     order: function(params) {
         return wxRequest.post(API.order, params);
     },
+    user: function(params) {
+        return wxRequest.post(API.user, params);
+    },
     orderItem: function(id) {
         return wxRequest.get(API.orderItem(id));
+    },
+    orderDele: function(id) {
+        return wxRequest.put(API.orderItem(id));
     },
     costItem: function(id) {
         return wxRequest.get(API.costItem(id));
     },
 
-    // classItem: function(user_id, class_id) {
-    //     return wxRequest.get(API.classItem(user_id, class_id));
-    // },
+    orderFind: function(id) {
+        return wxRequest.get(API.orderFind(id));
+    },
+    ordermMdify: function(id, params) {
+        return wxRequest.put(API.ordermMdify(id), params);
+    },
     // courseAll: function() {
     //     return wxRequest.get(API.courseAll);
     // },

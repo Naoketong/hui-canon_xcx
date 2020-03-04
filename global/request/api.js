@@ -13,8 +13,12 @@ export default {
     wxbind: `${PREFIX}/miniprogram/wxbind`,
     vehicleAll: `${PREFIX}/vehicle`,
     vehicleLevel: `${PREFIX}/vehicle/level`,
+    vehicleItem: (id) => `${PREFIX}/vehicle/${id}`,
     order: `${PREFIX}/order`,
+    user: `${PREFIX}/user`,
     orderItem: (id) => `${PREFIX}/order/${id}`,
+    orderFind: (id) => `${PREFIX}/order/find/${id}`,
+    ordermMdify: (id) => `${PREFIX}/order/modify/${id}`,
     costItem: (id) => `${PREFIX}/cost/${id}`,
     // class: (user_id) => `${PREFIX}/miniprogram/user/${user_id}/class`,
 

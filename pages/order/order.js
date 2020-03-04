@@ -1,15 +1,123 @@
+import indexService from '../../global/service/index.js';
+const app = getApp()
 Page({
     data: {
-
-        date: '2016-04-01',
-        dates: '2020-09-01',
+        userInfo: {},
+        sat_at: '',
+        end_at: '',
+        car_id: null,
+        vehicles: [],
+        cost: [],
+        rent_days: '',
+        cost_total: '',
 
     },
-
-    bindDateChange: function(e) {
-        console.log('picker发送选择改变，携带值为', e.detail.value)
-        this.setData({
-            date: e.detail.value
+    onLoad: function(option) {
+        this.setData({ car_id: option.car_id })
+        this.getVehicle();
+        this.getCost();
+        this.getData();
+    },
+    getData: function() {
+        app.getUserInfo().then(userInfo => {
+            // console.log(userInfo)
+            this.setData({ userInfo })
         })
     },
+
+    getVehicle: function(e) {
+        let id = this.data.car_id
+            // console.log(id)
+        indexService.vehicleItem(id).then(vehicles => {
+            // console.log(vehicles)
+            this.setData({ vehicles })
+        })
+    },
+    getCost: function(e) {
+        let id = this.data.car_id
+            // console.log(id)
+        indexService.costItem(id).then(cost => {
+            // console.log(cost)
+            this.setData({ cost })
+        })
+    },
+    bindstartStart: function(e) {
+        // console.log('picker发送选择改变，携带值为', e.detail.value)
+        this.setData({
+            sat_at: e.detail.value,
+        })
+        let sat_at = this.data.sat_at;
+        let end_at = this.data.end_at;
+        let d1 = new Date(sat_at);
+        let d2 = new Date(end_at);
+        let rent_days = (d2 - d1) / (24 * 60 * 60 * 1000)
+        let price = this.data.vehicles[0].price;
+        let total = this.data.cost[0].cost_total
+        let cost_total = Number(price) * Number(rent_days) + Number(total);
+        this.setData({ cost_total });
+        this.setData({ rent_days })
+    },
+    bindDateEnd: function(e) {
+        // console.log('picker发送选择改变，携带值为', e.detail.value)
+        this.setData({
+            end_at: e.detail.value,
+        })
+        let sat_at = this.data.sat_at;
+        let end_at = this.data.end_at;
+        let d1 = new Date(sat_at);
+        let d2 = new Date(end_at);
+        let rent_days = (d2 - d1) / (24 * 60 * 60 * 1000)
+        let price = this.data.vehicles[0].price;
+        let total = this.data.cost[0].cost_total
+        let cost_total = Number(price) * Number(rent_days) + Number(total);
+        this.setData({ cost_total });
+        this.setData({ rent_days })
+    },
+    handSave: function(e) {
+        let order_number = ""; //订单号
+        for (let i = 0; i < 6; i++) //6位随机数，用以加在时间戳后面。
+        {
+            order_number += Math.floor(Math.random() * 10);
+        }
+        order_number = new Date().getTime() + order_number; //时间戳，用来生成订单号。
+
+        let name = this.data.userInfo.name;
+        let phone = this.data.userInfo.phone;
+        let car_id = this.data.car_id;
+        let sat_at = this.data.sat_at;
+        let end_at = this.data.end_at;
+        let rent_days = this.data.rent_days;
+        let cost_total = this.data.cost_total;
+        if ( /*!name || !phone || !car_id ||*/ !sat_at || !end_at /*|| !rent_days || !cost_total*/ ) {
+            wx.showToast({
+                title: '缺少必要参数',
+            })
+            return
+        }
+        indexService.order({
+            order_number,
+            name,
+            phone,
+            car_id,
+            sat_at,
+            end_at,
+            rent_days,
+            cost_total
+        }).then(res => {
+
+            setTimeout(() => {
+                wx.navigateTo({
+                    url: '/pages/order_success/order_success?order_number=' + order_number
+                })
+            }, 500);
+        }).catch(err => {
+            console.log(err)
+        }).finally(() => {
+            wx.hideLoading();
+        })
+
+    },
+
+
+
 })
