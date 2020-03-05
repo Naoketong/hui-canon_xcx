@@ -18,6 +18,7 @@ export default {
     user: `${PREFIX}/user`,
     orderItem: (id) => `${PREFIX}/order/${id}`,
     orderFind: (id) => `${PREFIX}/order/find/${id}`,
+    orderPhone: (id) => `${PREFIX}/order/phone/${id}`,
     ordermMdify: (id) => `${PREFIX}/order/modify/${id}`,
     costItem: (id) => `${PREFIX}/cost/${id}`,
     // class: (user_id) => `${PREFIX}/miniprogram/user/${user_id}/class`,

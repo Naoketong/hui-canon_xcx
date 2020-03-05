@@ -9,10 +9,10 @@
                 <view class="pd-cell__bd">微信</view>
                 <view class="pd-cell__ft">{{userInfo.nickName}}</view>
             </view>
-            <view class="pd-cell">
+            <navigator url="/pages/order_details/order_details?order_number={{order_number}}" class="pd-cell">
                 <view class="pd-cell__bd">我的订单</view>
-                <view class="pd-cell__ft">{{userInfo.name}}</view>
-            </view>
+                <!-- <view class="pd-cell__ft">{{userInfo.name}}</view> -->
+            </navigator>
             <view class="pd-cell">
                 <view class="pd-cell__bd">手机号</view>
                 <view class="pd-cell__ft">{{userInfo.phone}}</view>

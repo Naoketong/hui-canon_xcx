@@ -33,6 +33,9 @@ module.exports = {
     orderFind: function(id) {
         return wxRequest.get(API.orderFind(id));
     },
+    orderPhone: function(id) {
+        return wxRequest.get(API.orderPhone(id));
+    },
     ordermMdify: function(id, params) {
         return wxRequest.put(API.ordermMdify(id), params);
     },
