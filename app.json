@@ -1,5 +1,5 @@
 {
-    "pages": [
+    "pages": ["pages/index/index",
         "pages/my/my",
         "pages/choose/choose",
         "pages/registered/registered",
@@ -8,8 +8,8 @@
 
         "pages/order/order",
         "pages/data/data",
-        "pages/order_success/order_success",
-        "pages/index/index"
+        "pages/order_success/order_success"
+
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

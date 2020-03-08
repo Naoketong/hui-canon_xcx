@@ -32,7 +32,7 @@ Page({
 
     getVehicle: function() {
         indexService.vehicleAll().then(vehicle => {
-            this.setData({ vehicle })
+            this.setData({ vehicle: vehicle.datas })
 
         })
     },

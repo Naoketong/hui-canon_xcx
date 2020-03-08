@@ -14,6 +14,7 @@ Page({
             this.setData({ userInfo })
             let id = this.data.userInfo.phone;
             indexService.orderPhone(id).then(res => {
+                console.log(res)
                 this.setData({ order_number: res[0].order_number })
             })
         })

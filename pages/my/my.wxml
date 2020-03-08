@@ -11,7 +11,7 @@
             </view>
             <navigator url="/pages/order_details/order_details?order_number={{order_number}}" class="pd-cell">
                 <view class="pd-cell__bd">我的订单</view>
-                <!-- <view class="pd-cell__ft">{{userInfo.name}}</view> -->
+                <view class="pd-cell__ft">点击查看</view>
             </navigator>
             <view class="pd-cell">
                 <view class="pd-cell__bd">手机号</view>

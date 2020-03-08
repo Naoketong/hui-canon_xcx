@@ -34,6 +34,10 @@ Page({
             this.tips.show('error', '请输入手机号', 3000);
             return
         }
+        if (!(/^1(3|4|5|6|7|8|9)\d{9}$/.test(phone))) {
+            this.tips.show('error', '手机号码有误，请重填', 3000);
+            return
+        }
         wx.login({
             success: (wxLoginRes) => {
                 // console.log(wxLoginRes)
