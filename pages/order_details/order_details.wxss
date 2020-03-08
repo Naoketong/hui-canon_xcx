@@ -32,6 +32,7 @@ page {
 }
 
 .cartype-section {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -45,6 +46,22 @@ page {
     height: 200rpx;
     margin-right: 30rpx;
     border-radius: 25rpx;
+}
+
+.cartype-cancel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18rpx;
+    width: 150rpx;
+    height: 66rpx;
+    font-size: 30rpx;
+    line-height: 66rpx;
+    background-color: #f6b340;
+    color: #fff;
+    border: 1rpx solid #f6f6f6;
+    text-align: center;
+    border-radius: 12rpx;
 }
 
 .cartype-title {
@@ -182,4 +199,16 @@ page {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.order-button-item {
+    display: inline-block;
+    width: 688rpx;
+    line-height: 88rpx;
+    font-size: 30rpx;
+    margin: 0 auto 40rpx;
+    border-radius: 10rpx;
+    background-color: #ffffff;
+    color: #656565;
+    border: 1rpx solid #f6f6f6;
 }
