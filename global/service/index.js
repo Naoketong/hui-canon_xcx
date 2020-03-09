@@ -23,6 +23,9 @@ module.exports = {
     orderItem: function(id) {
         return wxRequest.get(API.orderItem(id));
     },
+    orderDel: function(id) {
+        return wxRequest.delete(API.orderItem(id));
+    },
     orderDele: function(id) {
         return wxRequest.put(API.orderItem(id));
     },

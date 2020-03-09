@@ -1,5 +1,7 @@
 {
-    "pages": ["pages/my/my",
+    "pages": [
+        "pages/order_toview/order_toview",
+        "pages/my/my",
         "pages/index/index",
 
         "pages/choose/choose",
