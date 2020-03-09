@@ -213,6 +213,10 @@ page {
     align-items: center;
 }
 
+.foot-button.getcar {
+    background-color: #909399;
+}
+
 .order-button-item {
     display: inline-block;
     width: 688rpx;

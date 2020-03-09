@@ -6,6 +6,7 @@ Page({
         order: [],
         cost: [],
         order_state: '',
+        get_car: '',
     },
     onLoad: function(options) {
         console.log(options.order_number)
@@ -18,6 +19,7 @@ Page({
             console.log(order)
             this.setData({ order })
             this.setData({ order_state: order[0].order_state })
+            this.setData({ get_car: order[0].get_car })
             let id = order[0].car_id;
             indexService.costItem(id).then(cost => {
                 this.setData({ cost })
@@ -88,12 +90,37 @@ Page({
                 }
             }
         })
+    },
+    handGetCar: function() {
+        let id = this.data.order_number;
+        let get_car = 2;
+        wx.showModal({
+            title: '提示',
+            content: '确定你已在店铺并且取到车钥匙吗？',
+            success: function(res) {
+                if (res.confirm) {
+                    indexService.ordermMdify(id, { get_car }).then(order => {
+                        console.log(order)
+                        wx.showToast({
+                            title: '已取车！',
+                        });
 
+                        setTimeout(() => {
+                            wx.switchTab({
+                                url: '/pages/index/index'
+                            })
+                        }, 500);
 
-
-
-
-
+                    })
+                } else if (res.cancel) {
+                    wx.showToast({
+                        title: '取消操作',
+                        icon: 'success',
+                        duration: 1000
+                    })
+                }
+            }
+        })
     },
 
 })

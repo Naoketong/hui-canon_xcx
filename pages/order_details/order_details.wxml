@@ -69,7 +69,8 @@
         <image class="certificate-img" src="/images/order-01.png"></image>
     </view>
     <view class="foot-botton-section" wx:if="{{order_state == '1'}}">
-        <view class="foot-button">取车</view>
+        <view class="foot-button" wx:if="{{get_car == '1'}}" bindtap="handGetCar">取车</view>
+        <view class="foot-button getcar" wx:if="{{get_car == '2'}}">已取车</view>
     </view>
    
 </view>
