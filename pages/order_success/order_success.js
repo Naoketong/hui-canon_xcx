@@ -18,21 +18,36 @@ Page({
     },
     orderCancel: function() {
         let id = this.data.order_number;
-
         let order_state = 3;
-        console.log(id, order_state)
-        indexService.ordermMdify(id, { order_state }).then(order => {
-            console.log(order)
-            wx.showToast({
-                title: '取消成功',
-            });
+        // console.log(id, order_state)
+        wx.showModal({
+            title: '提示',
+            content: '这是一个模态弹窗',
+            success: function(res) {
+                if (res.confirm) {
+                    indexService.ordermMdify(id, { order_state }).then(order => {
+                        console.log(order)
+                        wx.showToast({
+                            title: '取消成功',
+                        });
 
-            setTimeout(() => {
-                wx.switchTab({
-                    url: '/pages/index/index'
-                })
-            }, 500);
+                        setTimeout(() => {
+                            wx.switchTab({
+                                url: '/pages/index/index'
+                            })
+                        }, 500);
 
+                    })
+                } else if (res.cancel) {
+                    wx.showToast({
+                        title: '取消操作',
+                        icon: 'success',
+                        duration: 1000
+                    })
+                }
+            }
         })
+
+
     },
 })
