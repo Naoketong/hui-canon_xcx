@@ -1,13 +1,4 @@
 <view class="container">
-
-
-
-
-
- 
-
-
-
   <view class="banner-section">
     <text class="banner-title">汇典出行</text>
     <view class="banner-beijin">
@@ -41,14 +32,14 @@
   <view class="cartype-section">
     <view class="cartype-top-title">精选车型</view>
     <view class="cartype-list">
-      <view class="cartype-item" wx:for="{{vehicle}}">
+      <navigator url="/pages/order/order?car_id={{item.id}}" class="cartype-item" wx:for="{{vehicle}}">
         <image class="cartype-item_img" src="{{item.car_img}}"></image>
         <view class="cartype-item-text">
           <view class="cartype-title">{{item.car_name}} </view>
           <view class="cartype-sub">已租过<text>15</text>人</view>
           <view class="cartype-price">¥{{item.price}}<text>/日</text></view>
         </view>
-      </view>
+      </navigator>
       <!-- <view class="cartype-item">
         <image class="cartype-item_img" src="/images/cartype-01.jpg"></image>
         <view class="cartype-item-text">

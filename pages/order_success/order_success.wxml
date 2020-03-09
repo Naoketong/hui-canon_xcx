@@ -10,6 +10,7 @@
         <view class="order-button" hover-class="none" hover-stop-propagation="false">
             <navigator url="/pages/order_details/order_details?order_number={{order_number}}" class="order-button-item toview">查看订单</navigator>
             <view class="order-button-item cancel" bindtap="orderCancel">取消订单</view>
+            <navigator url="/pages/index/index" class="order-button-desc">点我回到首页</navigator>
         </view>
         
     </view>

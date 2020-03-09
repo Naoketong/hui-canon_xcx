@@ -67,3 +67,9 @@ page {
     color: #656565;
     border: 1rpx solid #f6f6f6;
 }
+
+.order-button-desc {
+    font-size: 30rpx;
+    color: #409EFF;
+    font-weight: 400;
+}

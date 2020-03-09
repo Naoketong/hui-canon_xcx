@@ -1,8 +1,9 @@
 {
-    "pages": [
+    "pages": ["pages/order_success/order_success",
+        "pages/index/index",
         "pages/order_toview/order_toview",
         "pages/my/my",
-        "pages/index/index",
+
 
         "pages/choose/choose",
         "pages/registered/registered",
@@ -10,8 +11,8 @@
         "pages/login/login",
 
         "pages/order/order",
-        "pages/data/data",
-        "pages/order_success/order_success"
+        "pages/data/data"
+
 
     ],
     "window": {
