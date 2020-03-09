@@ -1,17 +1,16 @@
 {
-    "pages": ["pages/order_success/order_success",
+    "pages": [
         "pages/index/index",
         "pages/order_toview/order_toview",
         "pages/my/my",
-
+        "pages/order_success/order_success",
 
         "pages/choose/choose",
         "pages/registered/registered",
         "pages/order_details/order_details",
         "pages/login/login",
 
-        "pages/order/order",
-        "pages/data/data"
+        "pages/order/order"
 
 
     ],
