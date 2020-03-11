@@ -5,6 +5,9 @@ module.exports = {
     bind: function(params) {
         return wxRequest.post(API.wxbind, params);
     },
+    exit: function(params) {
+        return wxRequest.post(API.wxexit, params);
+    },
     vehicleAll: function() {
         return wxRequest.get(API.vehicleAll);
     },

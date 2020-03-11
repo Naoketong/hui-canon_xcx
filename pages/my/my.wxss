@@ -109,3 +109,11 @@ page {
     height: 32rpx;
     vertical-align: middle;
 }
+
+.exit-login {
+    line-height: 80rpx;
+    text-align: center;
+    color: #67C23A;
+    font-size: 32rpx;
+    font-weight: 600;
+}

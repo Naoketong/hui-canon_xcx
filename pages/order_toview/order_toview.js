@@ -5,7 +5,16 @@ Page({
         order: [],
     },
     onLoad: function(options) {
+        this.getlogin();
         this.getData();
+    },
+    getlogin: function() {
+        let open_id = wx.getStorageSync('open_id')
+        if (!open_id) {
+            wx.redirectTo({
+                url: '/pages/login/login',
+            })
+        }
     },
     getData: function() {
         app.getUserInfo().then(userInfo => {

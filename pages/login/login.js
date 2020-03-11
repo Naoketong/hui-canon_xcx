@@ -26,6 +26,7 @@ Page({
     submitLogin: function() {
         let name = this.data.name;
         let phone = this.data.phone;
+        console.log(name, phone)
         if (!name) {
             this.tips.show('error', '请输入真实姓名', 3000);
             return
@@ -40,13 +41,15 @@ Page({
         }
         wx.login({
             success: (wxLoginRes) => {
-                // console.log(wxLoginRes)
+                console.log(wxLoginRes)
                 wx.showLoading({ title: "加载中", mask: true });
                 indexService.bind({
                     name,
                     phone,
                     code: wxLoginRes.code
                 }).then(res => {
+                    // console.log(res.open_id)
+                    wx.setStorageSync('open_id', res.open_id)
                     this.tips.show('success', "绑定成功", 3000);
                     setTimeout(() => {
                         wx.switchTab({

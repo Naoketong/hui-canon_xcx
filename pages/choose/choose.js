@@ -7,9 +7,18 @@ Page({
         level: 0
     },
     onLoad: function() {
+        this.getlogin();
         this.getData();
         this.getVehicleData();
 
+    },
+    getlogin: function() {
+        let open_id = wx.getStorageSync('open_id')
+        if (!open_id) {
+            wx.redirectTo({
+                url: '/pages/login/login',
+            })
+        }
     },
     getData: function() {
         app.getUserInfo().then(userInfo => {

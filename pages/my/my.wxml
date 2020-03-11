@@ -31,5 +31,9 @@
                 <view class="pd-cell__ft">v1.0.0</view>
             </view>
         </view>
+        <view class="pd-cells">
+            <view class="exit-login" bindtap="exitLogin">退出登录</view>
+        </view>
+        
     </view>
 </view>

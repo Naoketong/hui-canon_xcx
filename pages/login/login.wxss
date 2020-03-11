@@ -1,9 +1,12 @@
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
 page {
     background-color: #F2F6FC;
 }
-
-
-/* .container {} */
 
 .login-title {
     text-align: center;

@@ -13,10 +13,19 @@ Page({
 
     },
     onLoad: function(option) {
+        this.getlogin();
         this.setData({ car_id: option.car_id })
         this.getVehicle();
         this.getCost();
         this.getData();
+    },
+    getlogin: function() {
+        let open_id = wx.getStorageSync('open_id')
+        if (!open_id) {
+            wx.redirectTo({
+                url: '/pages/login/login',
+            })
+        }
     },
     getData: function() {
         app.getUserInfo().then(userInfo => {

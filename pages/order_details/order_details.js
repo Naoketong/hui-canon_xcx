@@ -9,9 +9,18 @@ Page({
         get_car: '',
     },
     onLoad: function(options) {
-        console.log(options.order_number)
+        this.getlogin();
+        // console.log(options.order_number)
         this.setData({ order_number: options.order_number })
         this.getOrder();
+    },
+    getlogin: function() {
+        let open_id = wx.getStorageSync('open_id')
+        if (!open_id) {
+            wx.redirectTo({
+                url: '/pages/login/login',
+            })
+        }
     },
     getOrder: function(e) {
         let id = this.data.order_number;

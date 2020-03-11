@@ -15,8 +15,17 @@ Page({
 
     },
     onLoad: function(options) {
+        this.getlogin();
         this.getData();
         this.getVehicle();
+    },
+    getlogin: function() {
+        let open_id = wx.getStorageSync('open_id')
+        if (!open_id) {
+            wx.redirectTo({
+                url: '/pages/login/login',
+            })
+        }
     },
     getData: function() {
         app.getUserInfo().then(userInfo => {
