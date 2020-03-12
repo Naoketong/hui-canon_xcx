@@ -46,9 +46,10 @@ Page({
                 indexService.user({
                     name,
                     phone,
-                    // code: wxLoginRes.code
+                    code: wxLoginRes.code
                 }).then(res => {
-                    // this.tips.user('success', "添加成功", 3000);
+                    this.tips.show('success', "添加成功", 3000);
+                    wx.setStorageSync('open_id', res.open_id)
                     setTimeout(() => {
                         wx.switchTab({
                             url: '/pages/index/index'
@@ -62,8 +63,4 @@ Page({
             }
         })
     },
-
-
-
-
 })
