@@ -17,6 +17,7 @@ export default {
     vehicleItem: (id) => `${PREFIX}/vehicle/${id}`,
     order: `${PREFIX}/order`,
     user: `${PREFIX}/user`,
+    userItem: (id) => `${PREFIX}/user/${id}`,
     orderItem: (id) => `${PREFIX}/order/${id}`,
     orderFind: (id) => `${PREFIX}/order/find/${id}`,
     orderPhone: (id) => `${PREFIX}/order/phone/${id}`,

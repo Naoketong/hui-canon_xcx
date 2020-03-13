@@ -23,6 +23,9 @@ module.exports = {
     user: function(params) {
         return wxRequest.post(API.user, params);
     },
+    userItem: function(id) {
+        return wxRequest.get(API.userItem(id));
+    },
     orderItem: function(id) {
         return wxRequest.get(API.orderItem(id));
     },

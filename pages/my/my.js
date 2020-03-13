@@ -4,7 +4,7 @@ const app = getApp()
 Page({
     data: {
         userInfo: {},
-        phone: '',
+        id: '',
     },
     onLoad: function() {
         this.getlogin();
@@ -20,11 +20,12 @@ Page({
     },
     getData: function() {
         app.getUserInfo().then(userInfo => {
+            console.log(userInfo, '用户')
             this.setData({ userInfo })
-            let id = this.data.userInfo.phone;
-            indexService.orderPhone(id).then(res => {
+            let id = this.data.userInfo.id;
+            indexService.userItem(id).then(res => {
                 // console.log(res)
-                this.setData({ phone: res[0].phone })
+                this.setData({ id: res[0].id })
             })
         })
     },
