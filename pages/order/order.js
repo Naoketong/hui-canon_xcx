@@ -59,6 +59,7 @@ Page({
         let end_at = this.data.end_at;
         let d1 = new Date(sat_at);
         let d2 = new Date(end_at);
+
         let rent_days = (d2 - d1) / (24 * 60 * 60 * 1000)
         let price = this.data.vehicles[0].price;
         let total = this.data.cost[0].cost_total
@@ -95,6 +96,23 @@ Page({
         let car_id = this.data.car_id;
         let sat_at = this.data.sat_at;
         let end_at = this.data.end_at;
+        let strDateArrayStart = sat_at.split("-");
+        let strDateArrayEnd = end_at.split("-");
+        let strDateS = new Date(strDateArrayStart[0] + "/" + strDateArrayStart[1] + "/" + strDateArrayStart[2] + " 00:00:00");
+        let strDateE = new Date(strDateArrayEnd[0] + "/" + strDateArrayEnd[1] + "/" + strDateArrayEnd[2] + " 23:59:59");
+
+        let intDay = (strDateE - strDateS) / (1000 * 3600 * 24);
+        if (intDay < 0) {
+            wx.showToast({
+                title: '结束年月不能小与开始年月',
+            })
+            this.setData({
+                cost_total: '',
+                sat_at: '',
+                end_at: '',
+            });
+            return
+        }
         let rent_days = this.data.rent_days;
         let cost_total = this.data.cost_total;
         if ( /*!name || !phone || !car_id ||*/ !sat_at || !end_at /*|| !rent_days || !cost_total*/ ) {
@@ -113,7 +131,6 @@ Page({
             rent_days,
             cost_total
         }).then(res => {
-
             setTimeout(() => {
                 wx.navigateTo({
                     url: '/pages/order_success/order_success?order_number=' + order_number
@@ -126,7 +143,4 @@ Page({
         })
 
     },
-
-
-
 })

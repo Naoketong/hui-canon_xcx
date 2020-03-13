@@ -1,11 +1,14 @@
 {
-    "pages": ["pages/my/my", "pages/login/login",
+    "pages": [
+        "pages/choose/choose",
+        "pages/my/my",
+        "pages/login/login",
         "pages/index/index",
         "pages/order_toview/order_toview",
 
         "pages/order_success/order_success",
 
-        "pages/choose/choose",
+
         "pages/registered/registered",
         "pages/order_details/order_details",
 
