@@ -8,6 +8,13 @@ page {
     background-color: #F2F6FC;
 }
 
+.container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
 .login-title {
     text-align: center;
 }
@@ -23,7 +30,7 @@ page {
 .login-title {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    /* margin-top: 50px; */
 }
 
 .login-title_text {

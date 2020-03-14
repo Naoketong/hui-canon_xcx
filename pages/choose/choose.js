@@ -34,6 +34,7 @@ Page({
     getVehicleData: function(e) {
         let level = this.data.level;
         indexService.vehicleLevel({ level }).then(vehicles => {
+            console.log(vehicles[0].car_img)
             this.setData({ vehicles })
         })
     },

@@ -12,6 +12,7 @@ Page({
     },
     getlogin: function() {
         let open_id = wx.getStorageSync('open_id')
+        console.log(open_id)
         if (!open_id) {
             wx.redirectTo({
                 url: '/pages/login/login',
@@ -38,6 +39,7 @@ Page({
                     let open_id = wx.getStorageSync('open_id')
                     indexService.exit({ open_id }).then(user => {
                         console.log(user)
+                        wx.clearStorage('open_id')
                         wx.showToast({
                             title: '退出成功',
                         });
