@@ -1,5 +1,6 @@
 {
-    "pages": ["pages/login/login",
+    "pages": [
+        "pages/login/login",
         "pages/choose/choose",
         "pages/my/my",
 
