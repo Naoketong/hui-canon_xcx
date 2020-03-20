@@ -3,23 +3,12 @@
         "pages/login/login",
         "pages/choose/choose",
         "pages/my/my",
-
-
-
-
         "pages/index/index",
         "pages/order_toview/order_toview",
-
         "pages/order_success/order_success",
-
-
         "pages/registered/registered",
         "pages/order_details/order_details",
-
-
         "pages/order/order"
-
-
     ],
     "window": {
         "backgroundColor": "#F6F6F6",

@@ -4,6 +4,18 @@ Page({
         name: '',
         phone: '',
     },
+    onLoad: function(options) {
+        this.getlogin();
+    },
+    getlogin: function() {
+        let open_id = wx.getStorageSync('open_id')
+        console.log(open_id)
+        if (open_id) {
+            wx.switchTab({
+                url: '/pages/index/index',
+            })
+        }
+    },
     onReady: function() {
         this.tips = this.selectComponent('#pd-tips');
     },
