@@ -41,7 +41,8 @@ Page({
 
     getVehicle: function() {
         indexService.vehicleAll().then(vehicle => {
-            this.setData({ vehicle: vehicle.datas })
+            console.log(vehicle)
+            this.setData({ vehicle: vehicle.vehicleFree })
 
         })
     },

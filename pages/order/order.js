@@ -114,8 +114,9 @@ Page({
             });
             return
         }
-        let rent_days = this.data.rent_days;
+        let rent_days = this.data.rent_days || 1;
         let cost_total = this.data.cost_total;
+        console.log(name, phone, car_id, sat_at, end_at, rent_days, cost_total)
         if (!name || !phone || !car_id || !sat_at || !end_at || !rent_days || !cost_total) {
             wx.showToast({
                 title: '缺少必要参数',

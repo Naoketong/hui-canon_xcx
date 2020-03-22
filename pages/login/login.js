@@ -38,6 +38,7 @@ Page({
     submitLogin: function() {
         let name = this.data.name;
         let phone = this.data.phone;
+        let is_online = 1;
         console.log(name, phone)
         if (!name) {
             this.tips.show('error', '请输入真实姓名', 3000);
@@ -58,6 +59,7 @@ Page({
                 indexService.bind({
                     name,
                     phone,
+                    is_online,
                     code: wxLoginRes.code
                 }).then(res => {
                     // console.log(res.open_id)
