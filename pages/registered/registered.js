@@ -26,6 +26,7 @@ Page({
     submitLogin: function() {
         let name = this.data.name;
         let phone = this.data.phone;
+        let is_online = 1;
         if (!name) {
             this.tips.show('error', '请输入真实姓名', 3000);
             return
@@ -41,11 +42,12 @@ Page({
         // console.log(name, phone)
         wx.login({
             success: (wxLoginRes) => {
-                console.log(wxLoginRes)
+                // console.log(wxLoginRes)
                 wx.showLoading({ title: "加载中", mask: true });
                 indexService.user({
                     name,
                     phone,
+                    is_online,
                     code: wxLoginRes.code
                 }).then(res => {
                     this.tips.show('success', "添加成功", 3000);

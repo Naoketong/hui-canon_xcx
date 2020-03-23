@@ -34,7 +34,6 @@ Page({
     getVehicleData: function(e) {
         let level = this.data.level;
         indexService.vehicleLevel({ level }).then(vehicles => {
-            console.log(vehicles.datas)
             this.setData({ vehicles: vehicles.datas })
         })
     },
@@ -44,7 +43,6 @@ Page({
         })
         let level = e.currentTarget.dataset.level
         indexService.vehicleLevel({ level }).then(vehicles => {
-            console.log(vehicles)
             this.setData({ vehicles: vehicles.datas })
         })
     },

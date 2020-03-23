@@ -25,10 +25,11 @@ Page({
     getOrder: function(e) {
         let id = this.data.order_number;
         indexService.orderFind(id).then(order => {
-            console.log(order)
+            // console.log(order)
             this.setData({ order })
             this.setData({ order_state: order[0].order_state })
             this.setData({ get_car: order[0].get_car })
+            this.setData({ car_id: order[0].car_id })
             let id = order[0].car_id;
             indexService.costItem(id).then(cost => {
                 this.setData({ cost })
@@ -38,14 +39,14 @@ Page({
     orderCancel: function() {
         let id = this.data.order_number;
         let order_state = 3;
-        console.log(id, order_state)
+        let car_id = this.data.car_id;
         wx.showModal({
             title: '提示',
             content: '确认取消订单吗？',
             success: function(res) {
                 if (res.confirm) {
-                    indexService.ordermMdify(id, { order_state }).then(order => {
-                        console.log(order)
+                    indexService.ordermMdify(id, { order_state, car_id }).then(order => {
+                        // console.log(order)
                         wx.showToast({
                             title: '取消成功',
                         });
@@ -90,7 +91,7 @@ Page({
                         duration: 1000
                     })
                 } else if (res.cancel) {
-                    console.log('用户点击取消')
+                    // console.log('用户点击取消')
                     wx.showToast({
                         title: '已取消！',
                         icon: 'success',
@@ -109,7 +110,7 @@ Page({
             success: function(res) {
                 if (res.confirm) {
                     indexService.ordermMdify(id, { get_car }).then(order => {
-                        console.log(order)
+                        // console.log(order)
                         wx.showToast({
                             title: '已取车！',
                         });

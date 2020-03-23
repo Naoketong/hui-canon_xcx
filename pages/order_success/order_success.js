@@ -20,7 +20,7 @@ Page({
     },
     getOrder: function(e) {
         let order_number = this.data.order_number;
-        console.log(order_number)
+        // console.log(order_number)
     },
     orderCancel: function() {
         let id = this.data.order_number;
@@ -32,7 +32,7 @@ Page({
             success: function(res) {
                 if (res.confirm) {
                     indexService.ordermMdify(id, { order_state }).then(order => {
-                        console.log(order)
+                        // console.log(order)
                         wx.showToast({
                             title: '取消成功',
                         });

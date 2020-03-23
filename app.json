@@ -1,8 +1,9 @@
 {
-    "pages": ["pages/choose/choose",
+    "pages": ["pages/my/my",
+        "pages/choose/choose",
         "pages/login/login",
 
-        "pages/my/my",
+
         "pages/index/index",
         "pages/order_toview/order_toview",
         "pages/order_success/order_success",
