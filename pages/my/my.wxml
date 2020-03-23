@@ -9,14 +9,19 @@
                 <view class="pd-cell__bd">微信</view>
                 <view class="pd-cell__ft">{{userInfo.nickName}}</view>
             </view>
-            <navigator url="/pages/order_toview/order_toview" class="pd-cell">
-                <view class="pd-cell__bd">我的订单</view>
-                <view class="pd-cell__ft">点击查看</view>
-            </navigator>
+            <view class="pd-cell">
+                <view class="pd-cell__bd">姓名</view>
+                <view class="pd-cell__ft">{{userInfo.name}}</view>
+            </view>
+            
             <view class="pd-cell">
                 <view class="pd-cell__bd">手机号</view>
                 <view class="pd-cell__ft">{{userInfo.phone}}</view>
             </view>
+            <navigator url="/pages/order_toview/order_toview" class="pd-cell">
+                <view class="pd-cell__bd">我的订单</view>
+                <view class="pd-cell__ft">点击查看</view>
+            </navigator>
         </view>
         <view class="pd-cells mb-40">
             <view class="pd-cell" hover-class="pd-cell_hover">

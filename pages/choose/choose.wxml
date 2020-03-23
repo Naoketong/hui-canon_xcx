@@ -6,7 +6,7 @@
         <view class="car-choose-item {{level==1?'active':''}}" data-level="1" bindtap="changeLevel">SUV</view>
         <view class="car-choose-item {{level==2?'active':''}}" data-level="2" bindtap="changeLevel">中级车</view>
         <view class="car-choose-item {{level==3?'active':''}}" data-level="3" bindtap="changeLevel">豪华型</view>
-        <view class="car-choose-item {{level==4?'active':''}}" data-level="4" bindtap="changeLevel">商务型</view>
+        <view class="car-choose-item {{level==4?'active':''}}" data-level="4" bindtap="changeLevel">MPV</view>
         <view class="car-choose-item {{level==5?'active':''}}" data-level="5" bindtap="changeLevel">6至15座商务车</view>
       </view>
     </view>
