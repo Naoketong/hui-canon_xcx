@@ -59,19 +59,19 @@ page {
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    width: 200rpx;
+    width: 50%;
     height: 100%;
 }
 
 .cartype-img {
     margin-top: 30rpx;
-    width: 180rpx;
-    height: 180rpx;
+    width: 250rpx;
+    height: 194rpx;
 }
 
 .cartype-zizhu {
     display: inline-block;
-    width: 100rpx;
+    width: 50%;
     height: 30rpx;
     color: #6c6c6c;
     font-size: 18rpx;

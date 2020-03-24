@@ -105,6 +105,7 @@ Page({
         let car_id = this.data.car_id;
         let sat_at = this.data.sat_at;
         let end_at = this.data.end_at;
+
         let strDateArrayStart = sat_at.split("-");
         let strDateArrayEnd = end_at.split("-");
         let strDateS = new Date(strDateArrayStart[0] + "/" + strDateArrayStart[1] + "/" + strDateArrayStart[2] + " 00:00:00");
