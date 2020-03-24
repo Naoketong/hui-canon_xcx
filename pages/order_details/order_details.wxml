@@ -12,10 +12,8 @@
                 <view class="cartype-title">{{item.car_name}}</view>
                 <view class="cartype-sub">{{item.car_displacement}} | {{item.car_structure}}</view>
             </view>
-            <view class="cartype-cancel" bindtap="orderCancel" wx:if="{{order_state == '1' && get_car == '1'}}">取消订单</view>
-            <!-- <view class="cartype-cancel del" bindtap="orderDel" wx:if="{{order_state == '2' || '3'}}">删除订单</view> -->
-            <view class="cartype-cancel del" bindtap="orderDel" wx:if="{{order_state == '2'}}">删除订单</view>
-            <view class="cartype-cancel del" bindtap="orderDel" wx:if="{{order_state == '3'}}">删除订单</view>
+            <view class="cartype-operation cancel" bindtap="orderCancel" wx:if="{{order_state == '1' && get_car == '1'}}">取消订单</view>
+            <view class="cartype-operation del" bindtap="orderDel" wx:if="{{order_state == '2' || order_state == '3'}}">删除订单</view>
         </view>
         <view class="data-section">
                 <view class="data-start">

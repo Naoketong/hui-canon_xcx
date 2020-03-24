@@ -123,17 +123,6 @@ Page({
                 end_at: '',
             });
             return
-        } else if (intDay > 0) {
-            wx.showToast({
-                icon: 'none',
-                title: '开始年月不能小于结束年月',
-            })
-            this.setData({
-                cost_total: '',
-                sat_at: '',
-                end_at: '',
-            });
-            return
         }
         let rent_days = this.data.rent_days || 1;
         let cost_total = this.data.cost_total;
