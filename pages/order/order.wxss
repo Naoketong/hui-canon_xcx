@@ -39,9 +39,15 @@ page {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-size: 0;
     height: 150rpx;
     background-color: #fff;
     margin: 6rpx 0;
+}
+
+.data-item {
+    width: 33.33%;
+    text-align: center;
 }
 
 .data-yue {
@@ -64,6 +70,8 @@ page {
 
 .data-row {
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 210rpx;
     height: 4rpx;
     background-color: #d2d2d2;

@@ -7,19 +7,18 @@
         </view>
     </view>
     <view class="data-section">
-    
-        <picker class="data-start" mode="date" value="{{sat_at}}" start="2015-09-01" end="2050-12-31" bindchange="bindstartStart">          
-            <view class="data-yue">开始时间</view>
-            <view class="data-time">{{sat_at}}</view>
-        </picker>
-        <view class="data-zhi">
-            <view class="data-tian">请点击选择</view>
-            <view class="data-row"></view>
-        </view>
-        <picker class="data-end" mode="date" value="{{end_at}}" start="2015-09-01" end="2050-12-31" bindchange="bindDateEnd">
-           <view class="data-yue">结束时间</view>
-            <view class="data-time">{{end_at}}</view>
-        </picker>
+		<picker class="data-item" mode="date" value="{{sat_at}}" start="{{Yesterday}}" end="2050-12-31" bindchange="bindstartStart">          
+			<view class="data-yue">开始时间</view>
+			<view class="data-time">{{sat_at}}</view>
+		</picker>
+		<view class="data-item">
+			<view class="data-tian">请点击选择</view>
+        	<view class="data-row"></view>
+		</view>
+		<picker class="data-item" mode="date" value="{{end_at}}" start="{{Yesterday}}" end="2050-12-31" bindchange="bindDateEnd">
+			<view class="data-yue">结束时间</view>
+			<view class="data-time">{{end_at}}</view>
+		</picker>
     </view>
 
     <view class="cost-section">

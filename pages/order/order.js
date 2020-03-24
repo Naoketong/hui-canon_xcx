@@ -10,6 +10,7 @@ Page({
         cost: [],
         rent_days: '',
         cost_total: '',
+        Yesterday: '',
 
     },
     onLoad: function(option) {
@@ -18,6 +19,8 @@ Page({
         this.getVehicle();
         this.getCost();
         this.getData();
+        this.Yesterday();
+
     },
     getlogin: function() {
         let open_id = wx.getStorageSync('open_id')
@@ -49,6 +52,12 @@ Page({
             // console.log(cost)
             this.setData({ cost })
         })
+    },
+    Yesterday: function(e) {
+        let day = new Date();
+        day.setTime(day.getTime());
+        let Yesterday = day.getFullYear() + "-" + (day.getMonth() + 1) + "-" + day.getDate();
+        this.setData({ Yesterday: Yesterday })
     },
     bindstartStart: function(e) {
         // console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -100,12 +109,23 @@ Page({
         let strDateArrayEnd = end_at.split("-");
         let strDateS = new Date(strDateArrayStart[0] + "/" + strDateArrayStart[1] + "/" + strDateArrayStart[2] + " 00:00:00");
         let strDateE = new Date(strDateArrayEnd[0] + "/" + strDateArrayEnd[1] + "/" + strDateArrayEnd[2] + " 23:59:59");
-
         let intDay = (strDateE - strDateS) / (1000 * 3600 * 24);
+        // console.log(intDay)
         if (intDay < 0) {
             wx.showToast({
                 icon: 'none',
-                title: '结束年月不能小与开始年月',
+                title: '结束年月不能小于开始年月',
+            })
+            this.setData({
+                cost_total: '',
+                sat_at: '',
+                end_at: '',
+            });
+            return
+        } else if (intDay > 0) {
+            wx.showToast({
+                icon: 'none',
+                title: '开始年月不能小于结束年月',
             })
             this.setData({
                 cost_total: '',
@@ -116,7 +136,7 @@ Page({
         }
         let rent_days = this.data.rent_days || 1;
         let cost_total = this.data.cost_total;
-        console.log(name, phone, car_id, sat_at, end_at, rent_days, cost_total)
+        // console.log(name, phone, car_id, sat_at, end_at, rent_days, cost_total)
         if (!name || !phone || !car_id || !sat_at || !end_at || !rent_days || !cost_total) {
             wx.showToast({
                 title: '缺少必要参数',
