@@ -11,6 +11,7 @@
       </view>
     </view>
     <view class="content-right">
+      <view class="cartype-none" wx:if="{{cartype_none}}">暂无车型选择!</view>
       <view class="cartype-list">
         <navigator url="/pages/order/order?car_id={{item.id}}" class="cartype-item" wx:for="{{vehicles}}">
           <view class="cartype-left">

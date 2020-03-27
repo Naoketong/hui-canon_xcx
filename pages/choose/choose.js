@@ -4,7 +4,8 @@ Page({
     data: {
         userInfo: null,
         vehicles: [],
-        level: 0
+        level: 0,
+        cartype_none: false,
     },
     onLoad: function() {
         this.getlogin();
@@ -34,7 +35,13 @@ Page({
     getVehicleData: function(e) {
         let level = this.data.level;
         indexService.vehicleLevel({ level }).then(vehicles => {
-            this.setData({ vehicles: vehicles.datas })
+            if (vehicles.datas == '') {
+                this.setData({ cartype_none: true })
+            } else {
+                this.setData({ vehicles: vehicles.datas })
+                this.setData({ cartype_none: false })
+            }
+
         })
     },
     changeLevel: function(e) {
@@ -43,7 +50,15 @@ Page({
         })
         let level = e.currentTarget.dataset.level
         indexService.vehicleLevel({ level }).then(vehicles => {
-            this.setData({ vehicles: vehicles.datas })
+            console.log(vehicles)
+            if (vehicles.datas == '') {
+                this.setData({ cartype_none: true })
+                this.setData({ vehicles: vehicles.datas })
+            } else {
+                this.setData({ vehicles: vehicles.datas })
+                this.setData({ cartype_none: false })
+            }
+
         })
     },
 

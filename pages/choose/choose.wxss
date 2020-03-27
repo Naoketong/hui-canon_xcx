@@ -87,6 +87,13 @@ page {
     padding-top: 30rpx;
 }
 
+.cartype-none {
+    text-align: center;
+    font-size: 30rpx;
+    color: #606266;
+    margin-top: 50rpx;
+}
+
 .cartype-title {
     font-size: 30rpx;
     color: #333;
