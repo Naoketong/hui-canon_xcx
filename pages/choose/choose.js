@@ -48,9 +48,8 @@ Page({
         this.setData({
             level: e.currentTarget.dataset.level
         })
-        let level = e.currentTarget.dataset.level
+        let level = e.currentTarget.dataset.level || 1;
         indexService.vehicleLevel({ level }).then(vehicles => {
-            console.log(vehicles)
             if (vehicles.datas == '') {
                 this.setData({ cartype_none: true })
                 this.setData({ vehicles: vehicles.datas })

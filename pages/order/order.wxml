@@ -47,7 +47,8 @@
             </view>
             <view class="cost-item total">
                 <view class="cost-title">租金合计</view>
-                <view class="cost-number">{{cost_total}}元</view>
+                <view class="cost-number" wx:if="{{cost_total}}">{{cost_total}}元</view>
+                <view class="cost-number" wx:if="{{!cost_total}}">待计</view>
             </view>
             
         </view>
