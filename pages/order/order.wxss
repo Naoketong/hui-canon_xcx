@@ -130,6 +130,10 @@ page {
     margin-right: 60rpx;
 }
 
+.cost-number.total {
+    color: #f6a626;
+}
+
 .cost-title {
     color: #474747;
 }

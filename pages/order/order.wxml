@@ -12,7 +12,8 @@
 			<view class="data-time">{{sat_at}}</view>
 		</picker>
 		<view class="data-item">
-			<view class="data-tian">请点击选择</view>
+            <view class="data-tian" wx:if="{{!rent_days}}">请点击选择</view>
+            <view class="data-tian" wx:if="{{rent_days}}">{{rent_days}}天</view>
         	<view class="data-row"></view>
 		</view>
 		<picker class="data-item" mode="date" value="{{end_at}}" start="{{Yesterday}}" end="2050-12-31" bindchange="bindDateEnd">
@@ -47,7 +48,7 @@
             </view>
             <view class="cost-item total">
                 <view class="cost-title">租金合计</view>
-                <view class="cost-number" wx:if="{{cost_total}}">{{cost_total}}元</view>
+                <view class="cost-number total" wx:if="{{cost_total}}">{{cost_total}}元</view>
                 <view class="cost-number" wx:if="{{!cost_total}}">待计</view>
             </view>
             

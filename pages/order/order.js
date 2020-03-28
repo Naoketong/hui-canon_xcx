@@ -81,11 +81,18 @@ Page({
         this.setData({
             end_at: e.detail.value,
         })
+        if (!this.data.sat_at) {
+            wx.showToast({
+                icon: 'none',
+                title: '没选开始日期',
+            })
+            return
+        }
         let sat_at = this.data.sat_at;
         let end_at = this.data.end_at;
         let d1 = new Date(sat_at);
         let d2 = new Date(end_at);
-        let rent_days = (d2 - d1) / (24 * 60 * 60 * 1000)
+        let rent_days = (d2 - d1) / (24 * 60 * 60 * 1000) || 1
         let price = this.data.vehicles[0].price;
         let total = this.data.cost[0].cost_total
         let cost_total = Number(price) * Number(rent_days) + Number(total);
