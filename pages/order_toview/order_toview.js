@@ -3,6 +3,7 @@ const app = getApp()
 Page({
     data: {
         order: [],
+        order_none: false,
     },
     onLoad: function(options) {
         this.getlogin();
@@ -22,6 +23,9 @@ Page({
             let id = this.data.userInfo.phone;
             indexService.orderPhone(id).then(order => {
                 // console.log(order)
+                if (order == '') {
+                    this.setData({ order_none: true })
+                }
                 this.setData({ order: order })
             })
         })

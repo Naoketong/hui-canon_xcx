@@ -128,6 +128,7 @@ Page({
                 cost_total: '',
                 sat_at: '',
                 end_at: '',
+                rent_days: '',
             });
             return
         }

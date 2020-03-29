@@ -1,4 +1,5 @@
 <view class="container">
+    <view class="order-on-title" wx:if="{{order_none}}">暂无订单!</view>
     <view class="order_list">
         <navigator class="order_item" url="/pages/order_details/order_details?order_number={{item.order_number}}" wx:for="{{order}}" bindtouchstart="handDel">
             <view class="order-on">
