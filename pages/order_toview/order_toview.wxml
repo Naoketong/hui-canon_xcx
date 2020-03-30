@@ -1,26 +1,19 @@
 <view class="container">
-    <view class="order-on-title" wx:if="{{order_none}}">暂无订单!</view>
-    <view class="order_list">
-        <navigator class="order_item" url="/pages/order_details/order_details?order_number={{item.order_number}}" wx:for="{{order}}" bindtouchstart="handDel">
-            <view class="order-on">
-                <view class="order-on-text">订单：{{item.order_number}}</view>
-                <!-- <view class="order-carname">车型：{{item.car_name}}</view> -->
-                <view class="order-on-prompt" wx:if="{{item.order_state == 1}}">进行中</view>
-                <view class="order-on-prompt complete" wx:if="{{item.order_state == 2}}">已完成</view>
-                <view class="order-on-prompt cancel" wx:if="{{item.order_state == 3}}">已取消</view>
-            </view>
-            <!-- <view class="order-on">
-                
-            </view> -->
-            <view class="order-en">
-                <view class="order-carname">车型：{{item.car_name}}</view>
-                <view class="order-en-time">创建时间：{{item.order_date}}</view>
-                <!-- <view class="order-en-del">删除订单</view> -->
-            </view>
-           
-        </navigator>
-
-
-
-    </view>
+  <view class="order-on-title" wx:if="{{order_none}}">暂无订单!</view>
+  <view class="order_list">
+    <navigator class="order_item" url="/pages/order_details/order_details?order_number={{item.order_number}}" wx:for="{{order}}" bindtouchstart="handDel">
+      <view class="order-on">
+        <view class="order-on-text">订单：{{item.order_number}}</view>
+        <!-- <view class="order-carname">车型：{{item.car_name}}</view> -->
+        <view class="order-on-prompt" wx:if="{{item.order_state == 1}}">进行中</view>
+        <view class="order-on-prompt complete" wx:if="{{item.order_state == 2}}">已完成</view>
+        <view class="order-on-prompt cancel" wx:if="{{item.order_state == 3}}">已取消</view>
+      </view>
+      <view class="order-en">
+        <view class="order-carname">车型：{{item.car_name}}</view>
+        <view class="order-en-time">创建时间：{{item.order_date}}</view>
+        <!-- <view class="order-en-del">删除订单</view> -->
+      </view>
+    </navigator>
+  </view>
 </view>

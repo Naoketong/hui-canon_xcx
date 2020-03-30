@@ -4,7 +4,7 @@ Page({
     data: {
         userInfo: null,
         vehicles: [],
-        level: 0,
+        level: 1,
         cartype_none: false,
     },
     onLoad: function() {
@@ -35,6 +35,7 @@ Page({
     getVehicleData: function(e) {
         let level = this.data.level;
         indexService.vehicleLevel({ level }).then(vehicles => {
+            console.log(vehicles)
             if (vehicles.datas == '') {
                 this.setData({ cartype_none: true })
             } else {
