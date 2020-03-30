@@ -1,166 +1,166 @@
 page {
-    width: 100%;
-    height: 100%;
-    background-color: #e8e8e8;
+	width: 100%;
+	height: 100%;
+	background-color: #e8e8e8;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .cartype-section {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 240rpx;
-    background-color: #fff;
-    padding: 0 50rpx;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	height: 240rpx;
+	background-color: #fff;
+	padding: 0 50rpx;
 }
 
 .cartype-img {
-    width: 240rpx;
-    height: 200rpx;
-    margin-right: 30rpx;
-    border-radius: 25rpx;
+	width: 240rpx;
+	height: 200rpx;
+	margin-right: 30rpx;
+	border-radius: 25rpx;
 }
 
 .cartype-title {
-    font-size: 30rpx;
-    color: #333;
+	font-size: 30rpx;
+	color: #333;
 }
 
 .cartype-sub {
-    font-size: 28rpx;
-    color: #848484;
+	font-size: 28rpx;
+	color: #848484;
 }
 
 .data-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 0;
-    height: 150rpx;
-    background-color: #fff;
-    margin: 6rpx 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 0;
+	height: 150rpx;
+	background-color: #fff;
+	margin: 6rpx 0;
 }
 
 .data-item {
-    width: 33.33%;
-    text-align: center;
+	width: 33.33%;
+	text-align: center;
 }
 
 .data-yue {
-    font-size: 26rpx;
-    color: #d2d2d2;
-    text-align: center;
+	font-size: 26rpx;
+	color: #d2d2d2;
+	text-align: center;
 }
 
 .data-time {
-    font-size: 28rpx;
-    color: #686868;
+	font-size: 28rpx;
+	color: #686868;
 }
 
 .data-tian {
-    font-size: 32rpx;
-    color: #f6a626;
-    text-align: center;
-    margin-bottom: 4rpx;
+	font-size: 32rpx;
+	color: #f6a626;
+	text-align: center;
+	margin-bottom: 4rpx;
 }
 
 .data-row {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 210rpx;
-    height: 4rpx;
-    background-color: #d2d2d2;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 210rpx;
+	height: 4rpx;
+	background-color: #d2d2d2;
 }
 
 .data-row:after {
-    position: absolute;
-    top: -3rpx;
-    left: 0;
-    content: '';
-    display: inline-block;
-    width: 12rpx;
-    height: 12rpx;
-    background-color: #d2d2d2;
-    border-radius: 50%;
+	position: absolute;
+	top: -3rpx;
+	left: 0;
+	content: '';
+	display: inline-block;
+	width: 12rpx;
+	height: 12rpx;
+	background-color: #d2d2d2;
+	border-radius: 50%;
 }
 
 .data-row:before {
-    position: absolute;
-    top: -5rpx;
-    right: 0;
-    content: '';
-    width: 14rpx;
-    height: 4rpx;
-    background-color: #d2d2d2;
-    transform: rotate(45deg);
+	position: absolute;
+	top: -5rpx;
+	right: 0;
+	content: '';
+	width: 14rpx;
+	height: 4rpx;
+	background-color: #d2d2d2;
+	transform: rotate(45deg);
 }
 
 .cost-section {
-    width: 100%;
-    background-color: #fff;
-    margin: 10rpx 0;
-    padding: 20rpx 30rpx;
+	width: 100%;
+	background-color: #fff;
+	margin: 10rpx 0;
+	padding: 20rpx 30rpx;
 }
 
 .cost-list {
-    width: 100%;
+	width: 100%;
 }
 
 .cost-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 60rpx;
-    font-size: 30rpx;
-    color: #333;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 60rpx;
+	font-size: 30rpx;
+	color: #333;
 }
 
 .cost-item.total {
-    height: 120rpx;
-    border-top: 1rpx solid #f2f2f2;
+	height: 120rpx;
+	border-top: 1rpx solid #f2f2f2;
 }
 
 .cost-number {
-    margin-right: 60rpx;
+	margin-right: 60rpx;
 }
 
 .cost-number.total {
-    color: #f6a626;
+	color: #f6a626;
 }
 
 .cost-title {
-    color: #474747;
+	color: #474747;
 }
 
 .cost-item.other .cost-title,
 .cost-number {
-    color: #818181;
+	color: #818181;
 }
 
 .foot-botton-section {
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 140rpx;
-    background-color: #fff;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 140rpx;
+	background-color: #fff;
 }
 
 .foot-button {
-    width: 690rpx;
-    height: 92rpx;
-    font-size: 34rpx;
-    color: #fff;
-    background-color: #f6b340;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 690rpx;
+	height: 92rpx;
+	font-size: 34rpx;
+	color: #fff;
+	background-color: #f6b340;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }

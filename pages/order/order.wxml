@@ -1,61 +1,59 @@
 <view class="container">
-    <view class="cartype-section" wx:for="{{vehicles}}">
-        <image class="cartype-img" src="{{item.car_img}}"></image>
-        <view class="cartype-text">
-            <view class="cartype-title">{{item.car_name}}</view>
-            <view class="cartype-sub">{{item.car_displacement}} | {{item.car_structure}}</view>
-        </view>
-    </view>
-    <view class="data-section">
-		<picker class="data-item" mode="date" value="{{sat_at}}" start="{{Yesterday}}" end="2050-12-31" bindchange="bindstartStart">          
-			<view class="data-yue">开始时间</view>
-			<view class="data-time">{{sat_at}}</view>
-		</picker>
-		<view class="data-item">
-            <view class="data-tian" wx:if="{{!rent_days}}">请点击选择</view>
-            <view class="data-tian" wx:if="{{rent_days}}">{{rent_days}}天</view>
-        	<view class="data-row"></view>
+	<view class="cartype-section" wx:for="{{vehicles}}">
+		<image class="cartype-img" src="{{item.car_img}}"></image>
+		<view class="cartype-text">
+			<view class="cartype-title">{{item.car_name}}</view>
+			<view class="cartype-sub">{{item.car_displacement}} | {{item.car_structure}}</view>
 		</view>
-		<picker class="data-item" mode="date" value="{{end_at}}" start="{{Yesterday}}" end="2050-12-31" bindchange="bindDateEnd">
-			<view class="data-yue">结束时间</view>
-			<view class="data-time">{{end_at}}</view>
-		</picker>
-    </view>
+	</view>
+	<view class="data-section">
+	<picker class="data-item" mode="date" value="{{sat_at}}" start="{{Yesterday}}" end="2050-12-31" bindchange="bindstartStart">          
+		<view class="data-yue">开始时间</view>
+		<view class="data-time">{{sat_at}}</view>
+	</picker>
+	<view class="data-item">
+			<view class="data-tian" wx:if="{{!rent_days}}">请点击选择</view>
+			<view class="data-tian" wx:if="{{rent_days}}">{{rent_days}}天</view>
+			<view class="data-row"></view>
+	</view>
+	<picker class="data-item" mode="date" value="{{end_at}}" start="{{Yesterday}}" end="2050-12-31" bindchange="bindDateEnd">
+		<view class="data-yue">结束时间</view>
+		<view class="data-time">{{end_at}}</view>
+	</picker>
+	</view>
 
-    <view class="cost-section">
-        <view class="cost-list">
-            <view class="cost-item" wx:for="{{vehicles}}">
-                <view class="cost-title">车辆租赁费</view>
-                <view class="cost-number">{{item.price}}元</view>
-            </view>
-            <view wx:for="{{cost}}">
-                <view class="cost-item">
-                    <view class="cost-title">基础服务费</view>
-                    <view class="cost-number">{{item.cost_basis}}元</view>
-                </view>
-                <view class="cost-item">
-                    <view class="cost-title">车辆整备费</view>
-                    <view class="cost-number">{{item.cost_servic}}元</view>
-                </view>
-                <view class="cost-item">
-                    <view class="cost-title">其他费用</view>
-                    <view class="cost-number">{{item.cost_insurance}}元</view>
-                </view>
-                <view class="cost-item other">
-                    <view class="cost-title">· 车辆保险费</view>
-                    <view class="cost-number">{{item.cost_insurance}}元</view>
-                </view>
-            </view>
-            <view class="cost-item total">
-                <view class="cost-title">租金合计</view>
-                <view class="cost-number total" wx:if="{{cost_total}}">{{cost_total}}元</view>
-                <view class="cost-number" wx:if="{{!cost_total}}">待计</view>
-            </view>
-            
-        </view>
-    </view>
-
-    <view class="foot-botton-section">
-        <view class="foot-button" bindtap="handSave">确认订单</view>
-    </view>
+	<view class="cost-section">
+		<view class="cost-list">
+			<view class="cost-item" wx:for="{{vehicles}}">
+				<view class="cost-title">车辆租赁费</view>
+				<view class="cost-number">{{item.price}}元</view>
+			</view>
+			<view wx:for="{{cost}}">
+				<view class="cost-item">
+					<view class="cost-title">基础服务费</view>
+					<view class="cost-number">{{item.cost_basis}}元</view>
+				</view>
+				<view class="cost-item">
+					<view class="cost-title">车辆整备费</view>
+					<view class="cost-number">{{item.cost_servic}}元</view>
+				</view>
+				<view class="cost-item">
+					<view class="cost-title">其他费用</view>
+					<view class="cost-number">{{item.cost_insurance}}元</view>
+				</view>
+				<view class="cost-item other">
+					<view class="cost-title">· 车辆保险费</view>
+					<view class="cost-number">{{item.cost_insurance}}元</view>
+				</view>
+			</view>
+			<view class="cost-item total">
+				<view class="cost-title">租金合计</view>
+				<view class="cost-number total" wx:if="{{cost_total}}">{{cost_total}}元</view>
+				<view class="cost-number" wx:if="{{!cost_total}}">待计</view>
+			</view>
+		</view>
+	</view>
+	<view class="foot-botton-section">
+		<view class="foot-button" bindtap="handSave">确认订单</view>
+	</view>
 </view>

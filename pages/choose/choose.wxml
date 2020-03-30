@@ -25,11 +25,7 @@
               <view class="price-yuan">元</view> 
               <view class="price-sub">/日均</view>
             </view>
-          </view>
-          
-
-            
-          
+          </view>                            
         </navigator>
       </view>
     </view>

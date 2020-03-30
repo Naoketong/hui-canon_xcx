@@ -1,72 +1,72 @@
 page {
-    width: 100%;
-    height: 100%;
-    background-color: #e8e8e8;
+	width: 100%;
+	height: 100%;
+	background-color: #e8e8e8;
 }
 
 .container {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .order_item {
-    border: 1px solid #DCDFE6;
+	border: 1px solid #DCDFE6;
 }
 
 .order-on,
 .order-en {
-    display: flex;
-    justify-content: space-between;
-    height: 70rpx;
-    padding: 0 20rpx;
-    background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	height: 70rpx;
+	padding: 0 20rpx;
+	background-color: #fff;
 }
 
 .order-on-text {
-    font-size: 26rpx;
-    color: #989898;
-    line-height: 70rpx;
+	font-size: 26rpx;
+	color: #989898;
+	line-height: 70rpx;
 }
 
 .order-carname {
-    font-size: 30rpx;
-    color: #909399;
-    line-height: 70rpx;
+	font-size: 30rpx;
+	color: #909399;
+	line-height: 70rpx;
 }
 
 .order-on-prompt {
-    font-size: 30rpx;
-    color: #f4a319;
-    line-height: 70rpx;
-    text-align: right;
+	font-size: 30rpx;
+	color: #f4a319;
+	line-height: 70rpx;
+	text-align: right;
 }
 
 .order-on-prompt.complete {
-    color: #67C23A;
+	color: #67C23A;
 }
 
 .order-on-prompt.cancel {
-    color: #409EFF;
+	color: #409EFF;
 }
 
 .order-en-time {
-    font-size: 26rpx;
-    color: #989898;
-    line-height: 70rpx;
+	font-size: 26rpx;
+	color: #989898;
+	line-height: 70rpx;
 }
 
 .order-en-del {
-    font-size: 30rpx;
-    color: #F56C6C;
-    line-height: 70rpx;
-    text-align: right;
+	font-size: 30rpx;
+	color: #F56C6C;
+	line-height: 70rpx;
+	text-align: right;
 }
 
 .order-on-title {
-    display: flex;
-    justify-content: center;
-    font-size: 20rpx;
-    font-size: 34rpx;
-    margin-top: 100rpx;
-    color: #909399;
+	display: flex;
+	justify-content: center;
+	font-size: 20rpx;
+	font-size: 34rpx;
+	margin-top: 100rpx;
+	color: #909399;
 }

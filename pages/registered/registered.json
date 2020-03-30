@@ -1,5 +1,5 @@
 {
-    "usingComponents": {
-        "pd-tips": "/components/tips/tips"
-    }
+	"usingComponents": {
+		"pd-tips": "/components/tips/tips"
+	}
 }

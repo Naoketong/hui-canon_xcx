@@ -1,12 +1,12 @@
 Component({
-    properties: {
-        isShow: {
-            type: Boolean,
-            value: true,
-        }
-    },
-    data: {
-    },
-    methods: {
-    }
+	properties: {
+		isShow: {
+			type: Boolean,
+			value: true,
+		}
+	},
+	data: {
+	},
+	methods: {
+	}
 })
