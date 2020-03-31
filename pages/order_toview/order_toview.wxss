@@ -48,7 +48,9 @@ page {
 .order-on-prompt.cancel {
 	color: #409EFF;
 }
-
+.order-on-prompt.timeout {
+	color: #F56C6C;
+}
 .order-en-time {
 	font-size: 26rpx;
 	color: #989898;

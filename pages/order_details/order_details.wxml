@@ -14,6 +14,7 @@
       </view>
       <view class="cartype-operation cancel" bindtap="orderCancel" wx:if="{{order_state == '1' && get_car == '1'}}">取消订单</view>
       <!--<view class="cartype-operation del" bindtap="orderDel" wx:if="{{order_state == '2' || order_state == '3'}}">删除订单</view>-->
+      <view class="cartype-operation timeout" wx:if="{{order_state == '4'}}">订单超时</view>
     </view>
     <view class="data-section">
       <view class="data-start">

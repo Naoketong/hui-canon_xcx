@@ -8,6 +8,7 @@
         <view class="order-on-prompt" wx:if="{{item.order_state == 1}}">进行中</view>
         <view class="order-on-prompt complete" wx:if="{{item.order_state == 2}}">已完成</view>
         <view class="order-on-prompt cancel" wx:if="{{item.order_state == 3}}">已取消</view>
+        <view class="order-on-prompt timeout" wx:if="{{item.order_state == 4}}">订单超时</view>
       </view>
       <view class="order-en">
         <view class="order-carname">车型：{{item.car_name}}</view>

@@ -85,6 +85,16 @@ page {
 	font-size: 26rpx;
 	line-height: 30rpx;
 }
+.cartype-operation.timeout:after {
+	display: inline-block;
+	position: absolute;
+	bottom: -38px;
+	right: 0px;
+	content: '订单超时将加收费用';
+	color: #909399;
+	font-size: 26rpx;
+	line-height: 30rpx;
+}
 
 .cartype-operation.del {
 	background-color: #F56C6C;
