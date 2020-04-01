@@ -74,6 +74,9 @@ page {
 .cartype-operation.cancel {
 	background-color: #f6b340;
 }
+.cartype-operation.timeout {
+	background-color: rgb(243, 96, 96);
+}
 
 .cartype-operation.cancel:after {
 	display: inline-block;
